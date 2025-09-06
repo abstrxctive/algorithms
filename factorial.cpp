@@ -11,7 +11,7 @@ void factorial(int ParN, int ParK = 1) {
 
 int main() {
     int n;
-    cout << "Enter a factorial-number " << endl;
+    cout << "Enter a number" << endl;
     cin >> n;
 
     factorial(n);
