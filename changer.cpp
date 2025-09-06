@@ -9,7 +9,6 @@ void changer(int ParX, int ParY, int ParTmp) {
     ParY = ParTmp;
 
     cout << "after: " << ParX << " ; " << ParY << endl;
-
 }
 
 int main() {
