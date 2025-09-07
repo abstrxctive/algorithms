@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include <stdexcept>
 using namespace std;
 
 float ln_Newton(float x, float eps=1e-12, int max_iter=1000) {
