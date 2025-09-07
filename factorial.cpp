@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
-void factorial(int ParN, int ParK = 1) {
-    for (int i = 1; i <= ParN; i++) {
-        ParK = ParK * i;
+void factorial(int n, int k = 1) {
+    for (int i = 1; i <= n; i++) {
+        k = k * i;
     }
 
-    cout << "Result: " << ParK << endl;
+    cout << "Result: " << k << endl;
 }
 
 int main() {
