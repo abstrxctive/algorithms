@@ -1,52 +1,37 @@
 #include <iostream>
+#include <cmath>
+#include <stdexcept>
 using namespace std;
 
-void log(float n, float base) {
-    float k = 1;
-    float c = 0;
-
-    if (n > base) {
-        while (base != n) {
-            k = k * base;
-            c = c + 1;
-            if (k == n) {
-                break;
-            }
+float ln_Newton(float x, float eps=1e-12, int max_iter=1000) {
+    if (x <= 0) {
+        cout << "ln definite only for x > 0" << endl;
+    }
+    float y = x - 1;
+    for (int i = 0; i <= max_iter; i++) {
+        float y_next = y - (exp(y) - x) / exp(y);
+        if (abs(y_next - y) < eps) {
+            return y_next;
         }
-    cout << c << endl;
+        y = y_next;
     }
+    return y;
+}
 
-    else if (base > n) {
-        while (n != base) {
-            k = k * n;
-            c = c + 1;
-            if (k == base) {
-                break;
-            }
-        }
-    cout << 1/c << endl;
-    }
-
-    else if (n == 1) {
-        cout << 0 << endl;
-    }
-
-    else {
-        cout << 1 << endl;
-    }
-
+float log(float x, float base=2.71828182845904523) {
+    return ln_Newton(x) / ln_Newton(base);
 }
 
 int main() {
-    int n, base;
+    float base, n;
 
-    cout << "Enter a value of number: ";
+    cout << "Enter a number: ";
     cin >> n;
-
-    cout << "Enter a value of base: ";
+    cout << "Enter a base: ";
     cin >> base;
 
-    log(n, base);
+    float res = log(n, base);
+    cout << "Result: " << res << endl;
 
     return 0;
 }
