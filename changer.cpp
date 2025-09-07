@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-void changer(int ParX, int ParY, int ParTmp) {
-    cout << "before: " << ParX << " ; " << ParY << endl;
+void changer(int x, int y, int tmp) {
+    cout << "before: " << x << " ; " << y << endl;
 
-    ParTmp = ParX;
-    ParX = ParY;
-    ParY = ParTmp;
+    tmp = x;
+    x = y;
+    y = tmp;
 
-    cout << "after: " << ParX << " ; " << ParY << endl;
+    cout << "after: " << x << " ; " << y << endl;
 }
 
 int main() {
