@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void changer(int &x, int &y, int &tmp) {
+void changer(int& x, int& y, int tmp) {
     cout << "before: " << x << " ; " << y << endl;
 
     tmp = x;
