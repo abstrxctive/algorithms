@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Printf("SQRT TABLE\n")
+	fmt.Printf("SQRT TABLE\n\n")
 	
 	fmt.Print("    ")
 	for i := 0; i < 10; i++ {
